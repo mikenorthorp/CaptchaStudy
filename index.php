@@ -88,10 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 		// Set up the flag session variable to keep track of which captcha the user is on
 		$_SESSION['captchaFlags'] = $captchaFlags;
-
-		// Redirect to first captcha to start
-		var_dump($_SESSION['captchaOrder']);
-		var_dump($_SESSION['captchaFlags']);
 	}
 }
 ?>
