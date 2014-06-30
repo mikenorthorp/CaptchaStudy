@@ -88,6 +88,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 		// Set up the flag session variable to keep track of which captcha the user is on
 		$_SESSION['captchaFlags'] = $captchaFlags;
+
+
+		// Set variables for times
+		$captchaTimes = array(
+		    "first" => 0,
+		    "second" => 0,
+		    "third" => 0, 
+		    "fourth" => 0,
+		    "fifth" => 0,
+		);
+
+		// Set up array to store captcha times
+		$_SESSION['captchaTimes'] = $captchaTimes;
 	}
 }
 ?>
@@ -96,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
 	<meta charset="utf-8">
 	<title>Captcha Study - Main</title>
-	<link rel="stylesheet" href="main.css" type="text/css">
 </head>
 
 <body>
