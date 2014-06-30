@@ -77,17 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		// Set up order for this user for captchas
 		$_SESSION['captchaOrder'] = $captchaOrder;
 
-		// Set up flags for when captchas are completed
-		$captchaFlags = array(
-		    "first" => 0,
-		    "second" => 0,
-		    "third" => 0, 
-		    "fourth" => 0,
-		    "fifth" => 0,
-		);
-
 		// Set up the flag session variable to keep track of which captcha the user is on
-		$_SESSION['captchaFlags'] = $captchaFlags;
+		$_SESSION['captchaNumber'] = 0;
 
 
 		// Set variables for times
@@ -113,6 +104,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 		// Set up array to store captcha times
 		$_SESSION['captchaAttempts'] = $captchaAttempts;
+
+		// Redirect user to correct starting captcha (the first one in the order array)
+		$redirectURL = '/' . $_SESSION['captchaOrder']['first'] . '.php';
+		header("Location: http://localhost" . $redirectURL);
+		die();
 	}
 }
 ?>
