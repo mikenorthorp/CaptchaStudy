@@ -22,7 +22,7 @@
 require_once("nucaptcha/php/leapmarketingclient.php");
 
 // Your ClientKey is supplied by Leap and can be downloaded from the publisher dashboard
-Leap::SetClientKey("LEAP|0|4|TYPE|9|CLIENTKEY|CID|5|15669|KID|5|15321|SKEY|32|VE1JclpPSVNjeXpHUVNJRUl1Y2Rodyws");
+Leap::SetClientKey("YOUR_CLIENT_KEY_HERE");
 
 // The session is used in this example to store persistent data on the server
 session_start();
@@ -80,4 +80,3 @@ $player_output = $t->GetWidget();
 
 <!-- Tell the user what happened last time through -->
 Transaction Status: <?php echo $transaction_status; ?>
-

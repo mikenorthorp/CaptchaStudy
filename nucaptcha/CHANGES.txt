@@ -1,0 +1,89 @@
+May 7, 2013 - 1.0.16623
+- Improved error handling on calls to dns_get_record call
+April 1, 2013 - 1.0.16383
+- Added minor parsing checks in lmTextChunk
+Feb 19, 2013 - 1.0.16185
+- Removed some warnings triggered in PHP strict mode
+Aug 14, 2012 - 1.0.14342
+- Added support for Cookie Security.  Default is off.
+June 14, 2012 - 1.0.13738
+- Changed lm prefix to lmc 
+March 30, 2012 - 1.0.12882
+- Deprecated GetErrorCode and GetErrorString. Changed to GetStatusCode and 
+January 26, 2012 - 1.0.12356
+- NuCaptcha client now has the option to communicate with NuCaptcha servers using compressed messages.  Off by default.
+January 9, 2012 - 1.0.12134
+- DNS errors now have their own error code: LMEC_DNSERROR
+September 13, 2011 - 1.0.10903
+- dns_get_record is now optional dropping the windows minimum requirements to PHP 5.1
+- use fgets instead of fread in RPCLite
+August 15, 2011 - 1.0.10680
+- Added tabIndex parameter to GetWidget
+- Fixed hoptoad curl/fopen warning
+- Changed hoptoadapp to airbrakeapp
+- Added method to get a unique transaction ID
+April 19, 2011 - 1.0.9158
+- Disabled publishers will continue to validate
+- Improved error reporting
+Feb 3, 2011 - 1.0.8186
+- Cluster entry fallbacks are passed to nucaptcha widget init.
+- Validate no longer checks PUID or TIME on public persistent data.  This is done by the NuCaptcha platform.
+- Calls to PHP class_exists function no longer tries to autoload the classes.
+- DSERV is now stored in persistent data.
+Jan 13, 2011 - 1.0.7972
+- Added a hoptoad connect timeout
+- Clientlib version is rendering in widget as an HTML comment
+- noscript language support.  setLanguage moved from getWidget to initializeTransaction.
+Dec 22, 2010 - 1.0.7809
+- Fixed an issue with ValidateOnError.  It should only ever validate in the case of a token error.
+Nov 24, 2010 - 1.0.7372
+- Added Leap::ValidateOnError, enabled by default.
+Nov 11, 2010 - 1.0.7213
+- Regional DNS is now enabled. Token/data/validate requests now go to the closest data center.
+Nov 10, 2010 - 1.0.7203
+- fixes a pass by reference warning in leapmarketingclient.php
+Oct 18, 2010 - 1.0.6882
+- fixed 'Invalid Key, cannot decipher' errors that would show on some systems.
+Sept 16, 2010 - 1.0.6635
+- improved error reporting
+Sept 14, 2010 - 1.0.6593
+- token request tries three times then reverts to fallback url
+- validation request tries three times then reverts to fallback url
+- Leap::SetClientKey no longer throws when passed an invalid client key, check Leap::GetErrorCode
+Aug 30, 2010 - 1.0.6448
+- Added more diagnostics to the error emails
+Aug 27, 2010 - 1.0.6432
+- Bugfix in hoptoad error reporting client
+- Bugfix in hints chunk
+Aug 18, 2010 - 1.0.6292
+- Requirements bumped to PHP 5.3 on Mac and BSD (added a check for dns_get_record)
+- Fixed an issue specific 1.0.6154 on PHP 5.3 and higher
+July 28, 2010 - 1.0.6154
+- Updated to use new v4 protocol
+July 19, 2010 - 1.0.6062
+- Added define for CSS skins enable, still in development
+July 12, 2010 - 1.0.5995
+- Added HINT to the TREQ
+Jul 7, 2010 - 1.0.5951
+- Try again if sendTREQ fails
+Jul 4, 2010 - 1.0.5907
+- Better handling of DNS records
+Jul 2, 2010 - 1.0.5892
+- PHP requirements on windows bumped up to PHP 5.3 (for dns_get_record)
+- Updated the license to LGPL 2.1 found in license.txt
+Jul 1, 2010 - 1.0.5857
+- Fixed a warning in leapsymmetric.php
+Jun 24, 2010 - 1.0.5700
+- Fixed a PHP 5.3 compatibility issue (deprecated split)
+- Added request URI information to the token request
+June 16, 2010 - 1.0.5511
+- Added platform parameter to client lib Leap::InitializeTransaction
+- Added purpose parameter to client lib Leap::InitializeTransaction
+- Fixed a bug with the $unique_id parameter in Leap::ValidateTransaction
+- Client lib does a prerequisite check for PHP 5.1+ and mcrypt
+April 22, 2010 - 1.0.5086
+- Changes some links in the documentation to reflect some site changes
+April 19, 2010 - 1.0.5000
+- Calls to Leap::GetErrorCode() and Leap::GetErrorMessage() force a socket read
+- Integrated Hoptoad client error reporting
+- Synced up a few error codes
