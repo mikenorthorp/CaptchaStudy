@@ -110,6 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		header("Location: http://localhost" . $redirectURL);
 		die();
 	}
+} else {
+	// Destroy session if no post was made, starting new session
+	session_start();
+	session_destroy();
 }
 ?>
 <!DOCTYPE html>

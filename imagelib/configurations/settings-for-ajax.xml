@@ -1,0 +1,28 @@
+<configuration>
+    <credentials>
+        <!--TODO: The customer fills our their credentials once registered -->
+        <customer_id>nLflJtlu</customer_id>
+        <site_id>localhost47</site_id>
+        <api_username>KyGmguen5YDDgyNVGs9oZlQYqZ2FReMZJGY93YLu</api_username>
+        <api_password>s0EqGH8FZxGJPQvEBzoizxs7ZUJf8yxelLaAZz5d</api_password>
+    </credentials>
+<properties>
+    <!-- A detailed list of property options for this section is available at:
+     http://login.confidenttechnologies.com/docs/configuration -->
+    <captcha_length>3</captcha_length>
+    <width>3</width>
+    <height>3</height>
+    <captcha_color>Pearl</captcha_color>
+    <image_code_color>White</image_code_color>
+    <display_style>flyout</display_style>
+    <logo_name></logo_name>
+    <billboard_name></billboard_name>
+    <noise_level>0.2</noise_level>
+    <failure_policy_math>math</failure_policy_math>
+    <show_letters>FALSE</show_letters>
+    <ajax_verify>TRUE</ajax_verify>
+    <max_tries>3</max_tries>
+    <!-- TODO: The customer fills out their callback url, a url to the callback/ajax functions of our Confident Captcha-->
+    <callback_url></callback_url>
+</properties>
+</configuration>
