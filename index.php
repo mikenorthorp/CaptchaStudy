@@ -10,14 +10,88 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	/* based on that number */
 
 	if (isset($_POST['user_id'])) {
-		$userID = $_POST['user_id'];
-		echo $userID;
+		$userID = intval($_POST['user_id']);
 
 		// Start session variable to track order
+		session_start();
+
+		// Set userId for this session
+		$_SESSION['user_id'] = $userID;
 
 		// Figure out order based on userID
+		$first = "captcha1";
+		$second = "captcha2";
+		$third = "captcha3";
+		$fourth = "captcha4";
+		$fifth = "captcha5";
+
+		// Order 1,2,3,4,5
+		if($userID % 5 == 0) {
+			$first = "captcha1";
+			$second = "captcha2";
+			$third = "captcha3";
+			$fourth = "captcha4";
+			$fifth = "captcha5";
+		// Order 5,4,3,2,1
+		} elseif($userID % 5 == 1) {
+			$first = "captcha5";
+			$second = "captcha4";
+			$third = "captcha3";
+			$fourth = "captcha2";
+			$fifth = "captcha1";
+
+		// Order 2,3,4,5,1
+		} elseif($userID % 5 == 2) {
+			$first = "captcha2";
+			$second = "captcha3";
+			$third = "captcha4";
+			$fourth = "captcha5";
+			$fifth = "captcha1";
+
+		// Order 3,4,5,1,2
+		} elseif($userID % 5 == 3) {
+			$first = "captcha3";
+			$second = "captcha4";
+			$third = "captcha5";
+			$fourth = "captcha1";
+			$fifth = "captcha2";
+
+		// Order 1,3,5,2,4
+		} elseif($userID % 5 == 4) {
+			$first = "captcha1";
+			$second = "captcha3";
+			$third = "captcha5";
+			$fourth = "captcha2";
+			$fifth = "captcha4";
+		}
+
+		// Set up an array for captcha order
+		$captchaOrder = array(
+		    "first" => $first,
+		    "second" => $second,
+		    "third" => $third, 
+		    "fourth" => $fourth,
+		    "fifth" => $fifth,
+		);
+
+		// Set up order for this user for captchas
+		$_SESSION['captchaOrder'] = $captchaOrder;
+
+		// Set up flags for when captchas are completed
+		$captchaFlags = array(
+		    "first" => 0,
+		    "second" => 0,
+		    "third" => 0, 
+		    "fourth" => 0,
+		    "fifth" => 0,
+		);
+
+		// Set up the flag session variable to keep track of which captcha the user is on
+		$_SESSION['captchaFlags'] = $captchaFlags;
 
 		// Redirect to first captcha to start
+		var_dump($_SESSION['captchaOrder']);
+		var_dump($_SESSION['captchaFlags']);
 	}
 }
 ?>
