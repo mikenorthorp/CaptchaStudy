@@ -4,6 +4,9 @@
 	// Store time in session variable
 	$time = intval($_POST['time'])/1000;
 	$captcha = $_POST['captcha'];
+
+	// Add to time for captcha
 	$_SESSION['captchaTimes'][$captcha] += $time;
-	print_r($_SESSION['captchaTimes'][$captcha]);
+	// Add to attempts for captcha
+	$_SESSION['captchaAttempts'][$captcha] += 1;
 ?>

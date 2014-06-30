@@ -26,8 +26,6 @@
     <div id="form">
       <form method="post" action="verifyRecaptcha.php">
         <?php
-          session_start();
-          var_dump($_SESSION['captchaTimes']['first']);
           require('recaptchalib.php');
           $publickey = "6Lf_EfYSAAAAADrevcb8fbU64STX1m3vcWlY-gaX"; // you got this from the signup page
           echo recaptcha_get_html($publickey);

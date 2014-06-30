@@ -101,6 +101,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 		// Set up array to store captcha times
 		$_SESSION['captchaTimes'] = $captchaTimes;
+
+		// Set variables for attempts
+		$captchaAttempts = array(
+		    "first" => 0,
+		    "second" => 0,
+		    "third" => 0, 
+		    "fourth" => 0,
+		    "fifth" => 0,
+		);
+
+		// Set up array to store captcha times
+		$_SESSION['captchaAttempts'] = $captchaAttempts;
 	}
 }
 ?>
