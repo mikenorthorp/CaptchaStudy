@@ -23,6 +23,19 @@
 		$next = "end";
 	}
 
+	// Set captcha to proper name for survey
+	if($captcha == "captcha1") {
+		$captcha = "first";
+	} elseif ($captcha == "captcha2") {
+		$captcha = "second";
+	} elseif ($captcha == "captcha3") {
+		$captcha = "third";
+	} elseif ($captcha == "captcha4") {
+		$captcha = "fourth";
+	} elseif ($captcha == "captcha5") {
+		$captcha = "fifth";
+	}
+
 	// If a post request is submitted, add answers to session and continue
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		// Set captcha ease
@@ -39,6 +52,7 @@
 			$_SESSION['captchaComments'][$captcha] = $_POST['element_1'];
 		}
 
+		session_write_close();
 		// Redirect to next captcha
 		$redirectURL = '/' . $next . '.php';
 		header("Location: http://localhost" . $redirectURL);

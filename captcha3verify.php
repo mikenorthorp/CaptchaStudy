@@ -25,6 +25,7 @@ require_once("nucaptcha/php/leapmarketingclient.php");
 Leap::SetClientKey("LEAP|0|4|TYPE|9|CLIENTKEY|CID|5|15669|KID|5|15321|SKEY|32|VE1JclpPSVNjeXpHUVNJRUl1Y2Rodyws");
 
 // The session is used in this example to store persistent data on the server
+sleep(2); 
 session_start();
 // Default some variables for substitution into the HTML output
 $passed = 0;
@@ -61,6 +62,7 @@ if(true === array_key_exists('leap', $_SESSION) && true === Leap::WasSubmitted()
 <?php if($passed == 1) { 
   // Increase which captcha on
   $_SESSION['captchaNumber'] += 1;
+  session_write_close();
   echo '<p> You entered the correct captcha, continue to next one.';
   echo '<br>';
   echo '<a href="/survey.php">Go Next</a>'; 

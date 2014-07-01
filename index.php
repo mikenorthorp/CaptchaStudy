@@ -141,6 +141,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		// Set up array to store captcha other comments
 		$_SESSION['captchaComments'] = $captchaComments;
 
+		session_write_close();
+
 		// Redirect user to correct starting captcha (the first one in the order array)
 		$redirectURL = '/' . $_SESSION['captchaOrder']['first'] . '.php';
 		header("Location: http://localhost" . $redirectURL);
