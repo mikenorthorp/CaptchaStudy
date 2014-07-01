@@ -1,0 +1,160 @@
+Captcha 1 - ReCaptcha
+Time to complete was 6.108 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 2 - Image Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 3 - Moving Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 4 - Game Captcha
+Time to complete was 7.646 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 5 - Custom Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 1 - ReCaptcha
+Time to complete was 5.434 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 2 - Image Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 3 - Moving Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 4 - Game Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 5 - Custom Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 1 - ReCaptcha
+Time to complete was 8.837 seconds
+Number of attempts was 2
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 2 - Image Captcha
+Time to complete was 10.691 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 3 - Moving Captcha
+Time to complete was 6.017 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 4 - Game Captcha
+Time to complete was 6.69 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 5 - Custom Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 1 - ReCaptcha
+Time to complete was 4.911 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 2 - Image Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 3 - Moving Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 4 - Game Captcha
+Time to complete was 5.644 seconds
+Number of attempts was 1
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+
+Captcha 5 - Custom Captcha
+Time to complete was 0 seconds
+Number of attempts was 0
+Ease of captcha was 
+Bot defense of captcha was 
+Additional comments were - 
+---------------------------------------------------
+

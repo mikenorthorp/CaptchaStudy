@@ -1,20 +1,26 @@
 <?php
 	// Survey validation and session saving
 	session_start();
-
+	var_dump($_SESSION);
 	// Figure out what captcha number they were on
 	$number = $_SESSION['captchaNumber'];
 	$captcha = "";
+	$next = "";
 	if($number == 1) {
 		$captcha = $_SESSION['captchaOrder']['first'];
+		$next = $_SESSION['captchaOrder']['second'];
 	} elseif ($number == 2) {
 		$captcha = $_SESSION['captchaOrder']['second'];
+		$next = $_SESSION['captchaOrder']['third'];
 	} elseif ($number == 3) {
 		$captcha = $_SESSION['captchaOrder']['third'];
+		$next = $_SESSION['captchaOrder']['fourth'];
 	} elseif ($number == 4) {
 		$captcha = $_SESSION['captchaOrder']['fourth'];
+		$next = $_SESSION['captchaOrder']['fifth'];
 	} elseif ($number == 5) {
 		$captcha = $_SESSION['captchaOrder']['fifth'];
+		$next = "end";
 	}
 
 	// If a post request is submitted, add answers to session and continue
@@ -32,6 +38,11 @@
 		if(isset($_POST['element_1'])) {
 			$_SESSION['captchaComments'][$captcha] = $_POST['element_1'];
 		}
+
+		// Redirect to next captcha
+		$redirectURL = '/' . $next . '.php';
+		header("Location: http://localhost" . $redirectURL);
+		die();
 	}
 
 
