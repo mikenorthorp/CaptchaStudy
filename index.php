@@ -105,6 +105,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		// Set up array to store captcha times
 		$_SESSION['captchaAttempts'] = $captchaAttempts;
 
+		// Set variables for survey results for ease of use
+		$captchaEase = array(
+		    "first" => "",
+		    "second" => "",
+		    "third" => "", 
+		    "fourth" => "",
+		    "fifth" => "",
+		);
+
+		// Set up array to store captcha ease answers
+		$_SESSION['captchaEase'] = $captchaEase;
+
+		// Set variables for survey results for bot defense
+		$captchaBot = array(
+		    "first" => "",
+		    "second" => "",
+		    "third" => "", 
+		    "fourth" => "",
+		    "fifth" => "",
+		);
+
+		// Set up array to store captcha bot defense
+		$_SESSION['captchaBot'] = $captchaBot;
+
+		// Set variables for survey results for other comments
+		$captchaComments = array(
+		    "first" => "",
+		    "second" => "",
+		    "third" => "", 
+		    "fourth" => "",
+		    "fifth" => "",
+		);
+
+		// Set up array to store captcha other comments
+		$_SESSION['captchaComments'] = $captchaComments;
+
 		// Redirect user to correct starting captcha (the first one in the order array)
 		$redirectURL = '/' . $_SESSION['captchaOrder']['first'] . '.php';
 		header("Location: http://localhost" . $redirectURL);
