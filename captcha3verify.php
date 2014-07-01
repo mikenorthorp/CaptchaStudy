@@ -59,7 +59,6 @@ if(true === array_key_exists('leap', $_SESSION) && true === Leap::WasSubmitted()
 </head>
 <body>
 <?php if($passed == 1) { 
-  session_start();
   // Increase which captcha on
   $_SESSION['captchaNumber'] += 1;
   echo '<p> You entered the correct captcha, continue to next one.';
@@ -70,7 +69,7 @@ if(true === array_key_exists('leap', $_SESSION) && true === Leap::WasSubmitted()
 <?php if($passed == 0) {
     echo '<p> You incorrectly entered the captcha, please try again.';
     echo '<br>';
-    echo '<a href="/captcha2.php">Try Again</a>'; 
+    echo '<a href="/captcha3.php">Try Again</a>'; 
   } 
 ?>
 </body>

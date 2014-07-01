@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 //******************************************************************************
 /*
@@ -21,30 +22,10 @@
 
 // Instantiate the AYAH object. You need to instantiate the AYAH object
 // on each page that is using PlayThru.
-require_once("game/ayah.php");
+require_once("ayah.php");
 $ayah = new AYAH();
 ?>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Captcha Study - Game Captcha</title>
-  <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
-      <script type="text/javascript">
-      $(function()
-      {
-          var start = null;
-          $(window).load(function(event) {
-              start = event.timeStamp;
-          });
-          $(window).unload(function(event) {
-              var time = event.timeStamp - start;
-              var captcha = "fourth";
-              $.post('timer.php', {time: time, captcha: captcha});
-          })
-      });
-  </script>
-</head>
-<body>
+
 <!-- Now we're going to build the form that PlayThru is attached to.
 In this example, the form submits to itself. -->
 <form method="post" action="captcha4verify.php">
@@ -58,5 +39,3 @@ In this example, the form submits to itself. -->
         <!-- Make sure the name of your 'Submit' matches the name you used on line 9. -->
         <input type="Submit" name="my_submit_button_name" value="Submit ">
 </form>
-</body>
-</html>
