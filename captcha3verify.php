@@ -27,8 +27,7 @@ Leap::SetClientKey("LEAP|0|4|TYPE|9|CLIENTKEY|CID|5|15669|KID|5|15321|SKEY|32|VE
 // The session is used in this example to store persistent data on the server
 session_start();
 // Default some variables for substitution into the HTML output
-$transaction_status = "New Transaction";
-$player_output      = "";
+$passed = 0;
 /*
  * Step 3:
  * Validate the previous transaction, if need be. Do this first, so that we can use the same code/page to validate and initialize a transaction.
@@ -43,61 +42,37 @@ if(true === array_key_exists('leap', $_SESSION) && true === Leap::WasSubmitted()
     if (true === $valid)
     {
         // We have a valid captcha
-        $transaction_status = 'Answer correct.';
+        $passed = 1;
     }
     else
     {
         // validation failed
-        $transaction_status = 'Answer wrong.';
+        $passed = 0;
     }
 }
-/*
- * Step 1:
- * Start a new transaction
- */
-// initialize the transaction
-$t = Leap::InitializeTransaction();
 
-// store the persistent data in the session for validation later
-// This should NEVER be sent to the client
-$_SESSION['leap'] = $t->GetPersistentData();
-
-// and get the actual player code
-$player_output = $t->GetWidget();
-/*
- * Step 2:
- * Display the NuCaptcha widget/HTML.
- */
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Captcha Study - Moving Captcha</title>
-  <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
-      <script type="text/javascript">
-      $(function()
-      {
-          var start = null;
-          $(window).load(function(event) {
-              start = event.timeStamp;
-          });
-          $(window).unload(function(event) {
-              var time = event.timeStamp - start;
-              var captcha = "third";
-              $.post('timer.php', {time: time, captcha: captcha});
-          })
-      });
-  </script>
+  <title>Captcha Verify</title>
 </head>
 <body>
-<!-- Form must use post method -->
-<form method="post" action="captcha3verify.php">
-
-    <?php echo $player_output; ?><br>
-
-    <!-- must supply your own submit button -->
-    <input type="submit" value="Submit" />
-</form>
+<?php if($passed == 1) { 
+  session_start();
+  // Increase which captcha on
+  $_SESSION['captchaNumber'] += 1;
+  echo '<p> You entered the correct captcha, continue to next one.';
+  echo '<br>';
+  echo '<a href="/survey.php">Go Next</a>'; 
+  } 
+?>
+<?php if($passed == 0) {
+    echo '<p> You incorrectly entered the captcha, please try again.';
+    echo '<br>';
+    echo '<a href="/captcha2.php">Try Again</a>'; 
+  } 
+?>
 </body>
 </html>
 
