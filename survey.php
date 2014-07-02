@@ -1,7 +1,7 @@
 <?php
 	// Survey validation and session saving
 	session_start();
-	var_dump($_SESSION);
+
 	// Figure out what captcha number they were on
 	$number = $_SESSION['captchaNumber'];
 	$captcha = "";
@@ -102,22 +102,22 @@
 
 		</span><p class="guidelines" id="guide_2"><small>1=Impossible, you could not complete it. 6=Trivial, you didn't even have to think to complete it.</small></p> 
 		</li>		<li id="li_3" >
-		<label class="description" for="element_3">How easy do you think this CAPTCHA would be at stopping automated attacks? *
+		<label class="description" for="element_3">How well do you think this CAPTCHA would be at stopping automated attacks? *
 
 Automated attacks are any computer, bot, or automated system that does not involve humans to solve the CAPTCHA. </label>
 		<span>
 			<input id="element_3_1" name="element_3" class="element radio" type="radio" value="1" />
-<label class="choice" for="element_3_1">1 - Immpossible</label>
+<label class="choice" for="element_3_1">1 - Stop None</label>
 <input id="element_3_2" name="element_3" class="element radio" type="radio" value="2" />
-<label class="choice" for="element_3_2">2 - Very Hard</label>
+<label class="choice" for="element_3_2">2 - Stop Very Little</label>
 <input id="element_3_3" name="element_3" class="element radio" type="radio" value="3" />
-<label class="choice" for="element_3_3">3 - Hard</label>
+<label class="choice" for="element_3_3">3 - Stop Few</label>
 <input id="element_3_4" name="element_3" class="element radio" type="radio" value="4" />
-<label class="choice" for="element_3_4">4 - Medium</label>
+<label class="choice" for="element_3_4">4 - Stop Some</label>
 <input id="element_3_5" name="element_3" class="element radio" type="radio" value="5" />
-<label class="choice" for="element_3_5">5 - Easy</label>
+<label class="choice" for="element_3_5">5 - Stop Almost All</label>
 <input id="element_3_6" name="element_3" class="element radio" type="radio" value="6" />
-<label class="choice" for="element_3_6">6 - Trivial</label>
+<label class="choice" for="element_3_6">6 - Stop Completely</label>
 
 		</span> 
 		</li>		<li id="li_1" >
