@@ -3,7 +3,7 @@
 	sleep(5);
 	session_start();
 	$userID = $_SESSION['user_id'];
-	$fileName = $userID . "studyResults.txt";
+	$fileName = "results/" . $userID . "studyResults.txt";
 
 	// Content variable for file
 	$content = "";
