@@ -24,25 +24,13 @@
 require_once("game/ayah.php");
 $ayah = new AYAH();
 ?>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>Captcha Study - Game Captcha</title>
   <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
-      <script type="text/javascript">
-      $(function()
-      {
-          var start = null;
-          $(window).load(function(event) {
-              start = event.timeStamp;
-          });
-          $(window).unload(function(event) {
-              var time = event.timeStamp - start;
-              var captcha = "fourth";
-              $.post('timer.php', {time: time, captcha: captcha});
-          })
-      });
-  </script>
+  <script type="text/javascript" src="js/timer.js"></script>
 </head>
 <body>
 <!-- Now we're going to build the form that PlayThru is attached to.

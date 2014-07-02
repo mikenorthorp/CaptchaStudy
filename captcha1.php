@@ -4,20 +4,7 @@
   <meta charset="utf-8">
   <title>Captcha Study - ReCaptcha</title>
   <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
-      <script type="text/javascript">
-      $(function()
-      {
-          var start = null;
-          $(window).load(function(event) {
-              start = event.timeStamp;
-          });
-          $(window).unload(function(event) {
-              var time = event.timeStamp - start;
-              var captcha = "first";
-              $.post('timer.php', {time: time, captcha: captcha});
-          })
-      });
-  </script>
+  <script type="text/javascript" src="js/timer.js"></script>
 </head>
 
 <body>
