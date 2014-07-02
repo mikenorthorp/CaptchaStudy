@@ -107,17 +107,17 @@
 Automated attacks are any computer, bot, or automated system that does not involve humans to solve the CAPTCHA. </label>
 		<span>
 			<input id="element_3_1" name="element_3" class="element radio" type="radio" value="1" />
-<label class="choice" for="element_3_1">1 - Stop None</label>
+<label class="choice" for="element_3_1">1 - Stop 0%</label>
 <input id="element_3_2" name="element_3" class="element radio" type="radio" value="2" />
-<label class="choice" for="element_3_2">2 - Stop Very Little</label>
+<label class="choice" for="element_3_2">2 - Stop More Than 10%</label>
 <input id="element_3_3" name="element_3" class="element radio" type="radio" value="3" />
-<label class="choice" for="element_3_3">3 - Stop Few</label>
+<label class="choice" for="element_3_3">3 - Stop Stop More Than 30%</label>
 <input id="element_3_4" name="element_3" class="element radio" type="radio" value="4" />
-<label class="choice" for="element_3_4">4 - Stop Some</label>
+<label class="choice" for="element_3_4">4 - Stop More Than 50%</label>
 <input id="element_3_5" name="element_3" class="element radio" type="radio" value="5" />
-<label class="choice" for="element_3_5">5 - Stop Almost All</label>
+<label class="choice" for="element_3_5">5 - Stop More Than 75%</label>
 <input id="element_3_6" name="element_3" class="element radio" type="radio" value="6" />
-<label class="choice" for="element_3_6">6 - Stop Completely</label>
+<label class="choice" for="element_3_6">6 - Stop 100%</label>
 
 		</span> 
 		</li>		<li id="li_1" >
