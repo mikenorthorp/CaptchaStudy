@@ -61,31 +61,25 @@
 
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>CAPTCHA Survey</title>
-<link rel="stylesheet" type="text/css" href="view.css" media="all">
-<script type="text/javascript" src="view.js"></script>
-
+	<meta charset="utf-8">
+	<title>CAPTCHA Survey</title>
+	<link rel="stylesheet" type="text/css" href="view.css" media="all">
+	<script type="text/javascript" src="view.js"></script>
 </head>
 <body id="main_body" >
-	
 	<img id="top" src="top.png" alt="">
 	<div id="form_container">
 		<form method="post" action="">
 		<form id="form_867687" class="appnitro"  method="post" action="">
-					<div class="form_description">
+		<div class="form_description">
 			<h2>CAPTCHA Survey</h2>
 			<p>Please fill out this quick survey for the captcha you just completed.</p>
 		</div>						
-			<ul >
-			
-					<li id="li_2" >
-		<label class="description" for="element_2">How easy was it for you to solve the CAPTCHA? *
-
-</label>
+			<ul>
+			<li id="li_2" >
+			<label class="description" for="element_2">How easy was it for you to solve the CAPTCHA? * </label>
 		<span>
 			<input id="element_2_1" name="element_2" class="element radio" type="radio" value="1" />
 <label class="choice" for="element_2_1">1 - Immpossible</label>
