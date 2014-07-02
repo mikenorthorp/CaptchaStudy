@@ -1,5 +1,6 @@
 <?php
 	// Save session variable stuff to a log file
+	sleep(5);
 	session_start();
 	$userID = $_SESSION['user_id'];
 	$fileName = $userID . "studyResults.txt";
@@ -87,8 +88,6 @@
 
 	// Divider
 	$content .= "---------------------------------------------------\n\n";
-
-	echo $content;
 
 	// Write contents to file, append if already data inside, and lock file from being changed while writing
 	// Make sure unicode characters dont get printed
